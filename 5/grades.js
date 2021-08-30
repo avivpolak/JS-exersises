@@ -7,13 +7,18 @@ function range(grades){
 function median(grades){
     grades=grades.sort()  
     if(grades.length%2==0){
-        console.log(grades[grades.length/2])
         return grades[grades.length/2]
     }
-    console.log(grades[grades.length/2+0.5])
     return grades[grades.length/2+0.5]
 }
+function halfRange(grades){
+    if(grades.length%2==0){
+        grades=grades.splice(0,grades.length/2)
+    }
+    else{
+        grades=grades.splice(0,grades.length/2+0.5)
+    }
+    return range(grades)
+}
 
-median(grades2)
-// your code goes here
 // console.log(...)
