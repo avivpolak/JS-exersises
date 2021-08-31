@@ -28,7 +28,7 @@ function display(grades){
 console.log(
     ":Stats"+"\n\t"+
         "Range: "+range(grades)+"\n\t"+
-        "Median:" +median(grades)+"\n\t"+
+        "Median: " +median(grades)+"\n\t"+
         "Half Range: "+halfRange(grades));}
 display(grades);
 display(grades2);
