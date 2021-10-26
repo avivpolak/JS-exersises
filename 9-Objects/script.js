@@ -1,33 +1,14 @@
-// list of Formula 1 champions since the year 2000
-const formula1Champions = [
-    "Schumacher",
-    "Schumacher",
-    "Schumacher",
-    "Schumacher",
-    "Schumacher",
-    "Alonso",
-    "Alonso",
-    "Räikkönen",
-    "Hamilton",
-    "Button",
-    "Vettel",
-    "Vettel",
-    "Vettel",
-    "Vettel",
-    "Hamilton",
-    "Hamilton",
-    "Rosberg",
-    "Hamilton",
-    "Hamilton",
-    "Hamilton",
-    "Hamilton"
-]
-let winners = {}
-
-function countWin(driver) {
-    if (!winners.hasOwnProperty(driver))
-        winners[driver]=1;
-    else  winners[driver]+=1;
-}
-formula1Champions.forEach(countWin)
-
+function rot13(str) {
+    let regex ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let replacement="NOPQRSTUVWXYZABCDEFGHIJKLM"
+    regex.split("");
+    for(let i =0;i<str.length;i++){
+      if (regex.includes(str[i])){
+       str= str.replace(str[i],replacement[regex.indexOf(str[i])])
+      }
+    }
+    console.log(str)
+    return str;
+  }
+  
+  rot13("SERR PBQR PNZC");
